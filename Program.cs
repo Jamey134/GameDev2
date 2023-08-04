@@ -17,7 +17,11 @@ Enemy Sephiroth = new Enemy("Sephiroth", 100); // <---- <Attrack> has a class in
 // Enemy Sephiroth = new Enemy("Sephiroth", 100, new List<Attack>{Firega}); // <---- <Attrack> has a class inside the <>
 
 
+
 Sephiroth.AddToAttackList(Waterga);
 Sephiroth.AddToAttackList(Firega);
 Sephiroth.AddToAttackList(Thunderga);
 Sephiroth.RandomAttack();
+Sephiroth._Health = -100;
+//Console.WriteLine(Sephiroth._Health);
+Sephiroth.ShowHealth();
