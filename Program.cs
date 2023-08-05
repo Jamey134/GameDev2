@@ -15,13 +15,18 @@ List<Attack> AttackList = new List<Attack>
 
 Enemy Sephiroth = new Enemy("Sephiroth", 100); // <---- <Attrack> has a class inside the <>
 // Enemy Sephiroth = new Enemy("Sephiroth", 100, new List<Attack>{Firega}); // <---- <Attrack> has a class inside the <>
+MeleeFighter Cloud = new MeleeFighter("Cloud");
+RangedFighter Tifa = new RangedFighter("Tifa");
+MagicCaster Aerith = new MagicCaster("Aerith");
 
-
-
+Cloud.Rage(Sephiroth);
+Tifa.Dash();
+Tifa.Attack(Sephiroth);
+Aerith.Heal(Tifa);
 Sephiroth.AddToAttackList(Waterga);
 Sephiroth.AddToAttackList(Firega);
 Sephiroth.AddToAttackList(Thunderga);
-Sephiroth.RandomAttack();
+Sephiroth.RandomAttack(Cloud);
 Sephiroth._Health = -100;
 //Console.WriteLine(Sephiroth._Health);
 Sephiroth.ShowHealth();
